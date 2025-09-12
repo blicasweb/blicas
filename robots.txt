@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gargzdublicas.lt/sitemap.xml
