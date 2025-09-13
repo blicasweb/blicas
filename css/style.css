@@ -76,7 +76,7 @@ footer {
 .swiper {
   width: 100vw;
   max-width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 12;
   margin: 2rem auto;
   border-radius: 10px;
   overflow: hidden;
@@ -103,7 +103,7 @@ footer {
 
 @media (min-width: 768px) {
   .swiper {
-    aspect-ratio: 16 / 7; /* Slightly taller on desktop */
+    aspect-ratio: 16 / 10; /* Taller on desktop */
   }
 }
 
@@ -133,4 +133,8 @@ iframe {
 
 .copyrights {
     color: #faed19;
+}
+
+.centered-text {
+    text-align: center;
 }
