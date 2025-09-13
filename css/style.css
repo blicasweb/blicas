@@ -130,3 +130,7 @@ iframe {
     height: calc(100vw * 9 / 16);
   }
 }
+
+.copyrights {
+    color: #faed19;
+}
