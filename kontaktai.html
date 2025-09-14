@@ -21,35 +21,35 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="site">
 
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="index.html">Pradinis</a></li>
-        <li><a href="apie.html">Apie mus</a></li>
-        <li><a href="kontaktai.html" class="active">Kontaktai</a></li>
-      </ul>
-    </nav>
-
-    <!-- Header -->
+    <!-- Header with Navigation -->
     <header>
-      <h1>Kontaktai</h1>
-      <p>"Blicas" – šiuolaikiška savitarnos plovykla Gargžduose</p>
+      <img src="images/headerlogo.jpg" alt="Blicas Logo" class="logo">
+
+      <!-- Desktop Navigation -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Pradinis</a></li>
+          <li><a href="apie.html">Apie mus</a></li>
+          <li><a href="kontaktai.html" class="active">Kontaktai</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Menu -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </header>
 
     <!-- Main content -->
     <main>
       <div class="content-wrapper">
-        <p><strong>Adresas: </strong> Lenktoji g. 1, Gargždai</p>
-        <p><strong>Telefonas: </strong> <a href="tel:+37062717127">+370 627 17127</a></p>
-        <p><strong>El. paštas: </strong> <a href="mailto:gargzdublicas@gmail.com">gargzdublicas@gmail.com</a></p>
-        <p><strong>Darbo laikas: </strong>Pirmadienis – Sekmadienis: 24/7<br></p>
-        <p><strong>Rasti mus žemėlapyje: </strong><a href="https://www.google.com/maps/place/Blicas+-+savitarnos+plovykla/@55.7277993,21.3826577,104m/data=!3m1!1e3!4m15!1m8!3m7!1s0x46e4e056daf73667:0x1bd6a3a50e7c33e0!2sLenktoji+g.+1,+Garg%C5%BEdai,+96105+Klaip%C4%97dos+r.+sav.,+Lithuania!3b1!8m2!3d55.7278312!4d21.3826932!16s%2Fg%2F11y2f7ykh7!3m5!1s0x46e4e1001270cb13:0xfe2a2983f8ba8f29!8m2!3d55.7278482!4d21.3827969!16s%2Fg%2F11y32p1xm3?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Atidaryti Google Maps</a></p>
-        <hr>
         <!-- Google Maps Embed -->
         <div class="map-container">
           <iframe
@@ -64,9 +64,39 @@
           </iframe>
         </div>
         <hr>
-        <p><strong>Įmonės kodas: </strong> 306255968</p>
-        <p><strong>PVM mokėtojo kodas: </strong> LT100015844916</p>
-        <p><strong>Banko sąskaita: </strong> LT425010200014002881</p>
+        <table class="contact-info-table">
+          <tr>
+            <td class="label">Adresas:</td>
+            <td class="value"><a href="https://www.google.com/maps/place/Blicas+-+savitarnos+plovykla/@55.7277993,21.3826577,104m/data=!3m1!1e3!4m15!1m8!3m7!1s0x46e4e056daf73667:0x1bd6a3a50e7c33e0!2sLenktoji+g.+1,+Garg%C5%BEdai,+96105+Klaip%C4%97dos+r.+sav.,+Lithuania!3b1!8m2!3d55.7278312!4d21.3826932!16s%2Fg%2F11y2f7ykh7!3m5!1s0x46e4e1001270cb13:0xfe2a2983f8ba8f29!8m2!3d55.7278482!4d21.3827969!16s%2Fg%2F11y32p1xm3?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Lenktoji g. 1, Gargždai</a></td>
+          </tr>
+          <tr>
+            <td class="label">Telefonas:</td>
+            <td class="value"><a href="tel:+37062717127">+370 627 17127</a></td>
+          </tr>
+          <tr>
+            <td class="label">El. paštas:</td>
+            <td class="value"><a href="mailto:gargzdublicas@gmail.com">gargzdublicas@gmail.com</a></td>
+          </tr>
+          <tr>
+            <td class="label">Darbo laikas:</td>
+            <td class="value">Pirmadienis – Sekmadienis: 24/7</td>
+          </tr>
+        </table>
+        <hr>
+        <table class="contact-info-table">
+          <tr>
+            <td class="label">Įmonės kodas:</td>
+            <td class="value">306255968</td>
+          </tr>
+          <tr>
+            <td class="label">PVM mokėtojo kodas:</td>
+            <td class="value">LT100015844916</td>
+          </tr>
+          <tr>
+            <td class="label">Banko sąskaita:</td>
+            <td class="value">LT425010200014002881</td>
+          </tr>
+        </table>
       </div>
     </main>
 
@@ -77,5 +107,27 @@
     </footer>
 
   </div>
+
+<!-- Hamburger Menu JavaScript -->
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('nav');
+    const hamburger = document.querySelector('.hamburger');
+
+    nav.classList.toggle('active');
+    hamburger.classList.toggle('active');
+  }
+
+  // Close menu when clicking on a link
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const nav = document.querySelector('nav');
+      const hamburger = document.querySelector('.hamburger');
+      nav.classList.remove('active');
+      hamburger.classList.remove('active');
+    });
+  });
+</script>
+
 </body>
 </html>
